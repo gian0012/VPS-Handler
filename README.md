@@ -20,7 +20,7 @@ $chat = $message->chat;
 
     if(str_starts_with($text,"/reboot")){
         $Bot->reboot();
-        $chat->sendMessage("<i>Server rebooted</i>");
+        $chat->sendMessage("Server rebooted");
             
     }
     
