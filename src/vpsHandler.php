@@ -22,9 +22,9 @@ Bot::addMethod("getIP", function () {
     return ($output[0]);
 });
 
-Bot::addMethod("systemRestart", function ($text) {
+Bot::addMethod("systemRestart", function ($systemName) {
 
-    exec("systemctl restart $text ",$output);
+    exec("systemctl restart $systemName ",$output);
 });
 
 Bot::addMethod("uptime", function () {
