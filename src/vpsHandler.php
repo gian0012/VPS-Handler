@@ -3,7 +3,7 @@
 /**
  * File with the extension Prototype Methods.
  *
- * Creator of the extension t.me/gian0012
+ * Creator of the extension: t.me/gian0012
  * Licensed under the terms of the MIT License.
  */
 
@@ -29,7 +29,7 @@ Bot::addMethod("getIP", function () {
     return ($output[0]);
 });
 
-Bot::addMethod("systemRestart", function ($systemName) {
+Bot::addMethod("systemRestart", function ($systemName) { // try this commands using: $Bot->systemRestart("mysql");
 
     exec("systemctl restart $systemName ",$output);
 });
@@ -50,10 +50,9 @@ Bot::addMethod("ramUse", function () {
     return "$t0\n$t1\n$t2";
 });
 
-Bot::addMethod("startBot", function ($sessionName,$DirToFile) {
-
-    exec("screen -d -S $sessionName -m php $DirToFile ");
-    
+Bot::addMethod("startBot", function ($sessionName,$DirToFile) { //try this commands using: $Bot->startBot("screensession","/botdir/main.php"
+                                                                // This command just might to work only with NovaGram or cli-based php libraries.
+    exec("screen -d -S $sessionName -m php $DirToFile");
 
 });
 
