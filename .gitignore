@@ -2,6 +2,7 @@
 *.phar
 /vendor/
 composer.lock
+composer.json 
 
 ### phpstorm ###
 .idea/*
