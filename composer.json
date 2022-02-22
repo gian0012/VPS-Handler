@@ -1,0 +1,15 @@
+{
+  "name": "gian0012/vpshandler",
+  "description": "Use this unofficial NovaGram code source to handle your VPS.",
+  "type": "library",
+  "require": {
+    "php": ">=7.4"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "gian",
+    }
+  ],
+  "minimum-stability": "dev-main"
+}
