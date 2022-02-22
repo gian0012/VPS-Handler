@@ -11,5 +11,17 @@ You can also download the <a href='https://github.com/gian0012/VPS-Handler/blob/
 <b> • </b><code> $Bot->uptime();</code> \
 <b> • </b><code> $Bot->server();</code> \
 <b> • </b><code> $Bot->systemRestart($systemName);</code> 
+# ➕ Example
+There is an example <a href='https://github.com/gian0012/VPS-Handler/blob/main/examples/panel.php'>PHP File</a>, with a Telegram-based panel(with <b>InlineKeyboard</b>).
+# 📑 Example code
+```php
+$text = $message->text;
+$chat = $message->chat;
 
-
+    if(str_starts_with($text,"/reboot")){
+        $Bot->reboot();
+        $chat->sendMessage("<i>Server rebooted</i>");
+            
+    }
+    
+ 
