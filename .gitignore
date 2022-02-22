@@ -1,0 +1,7 @@
+### Composer ###
+*.phar
+/vendor/
+composer.lock
+
+### phpstorm ###
+.idea/*
