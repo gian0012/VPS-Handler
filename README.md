@@ -15,13 +15,14 @@ You can also download the <a href='https://github.com/gian0012/VPS-Handler/blob/
 There is an example <a href='https://github.com/gian0012/VPS-Handler/blob/main/examples/panel.php'>PHP File</a>, with a Telegram-based panel(with <b>InlineKeyboard</b>).
 # 📑 Example code
 ```php
-$text = $message->text;
-$chat = $message->chat;
+use skrtdev\NovaGram\Bot;
+use skrtdev\Telegram\Message;
 
-    if(str_starts_with($text,"/reboot")){
-        $Bot->reboot();
-        $chat->sendMessage("Server rebooted");
-            
-    }
+$Bot = new Bot('YOUR_TOKEN');
+
+$Bot->onCommand('uptime', function (Message $message) {
+    $a = $Bot->startBot('session','bot/file.php');
+    $message->reply("Bot started!");
+});
     
  
