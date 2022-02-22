@@ -29,9 +29,9 @@ Bot::addMethod("getIP", function () {
     return ($output[0]);
 });
 
-Bot::addMethod("systemRestart", function ($systemName) { // try this commands using: $Bot->systemRestart("mysql");
+Bot::addMethod("serviceRestart", function ($serviceName) { // try this commands using: $Bot->serviceRestart("mysql");
 
-    exec("systemctl restart $systemName ",$output);
+    exec("systemctl restart $serviceName ",$output);
 });
 
 Bot::addMethod("uptime", function () {
