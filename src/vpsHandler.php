@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File with the extension Prototype Methods.
+ *
+ * Creator of the extension t.me/gian0012
+ * Licensed under the terms of the MIT License.
+ */
+
 use \skrtdev\NovaGram\Bot;
 use \skrtdev\Telegram\Message;
 
