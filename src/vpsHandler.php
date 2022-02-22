@@ -45,7 +45,7 @@ Bot::addMethod("ramUse", function () {
 
 Bot::addMethod("startBot", function ($sessionName,$DirToFile) {
 
-    exec("screen -d -S $sessionName -m $DirToFile ");
+    exec("screen -d -S $sessionName -m php $DirToFile ");
     
 
 });
