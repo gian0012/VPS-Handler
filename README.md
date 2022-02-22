@@ -7,13 +7,9 @@ Install the extension with Composer:
 You can also download the <a href='https://github.com/gian0012/VPS-Handler/blob/main/src/vpsHandler.php'>vpsHandler.php</a> file and put it into your bot folder <b>directory</b>.
 # 🗄 Useful Methods
 <b> • </b><code> $Bot->startBot('/dir/to/your/bot/file.php');</code> \
-\
 <b> • </b><code> $Bot->reboot();</code> \
-\
 <b> • </b><code> $Bot->uptime();</code> \
-\
 <b> • </b><code> $Bot->server();</code> \
-\
 <b> • </b><code> $Bot->systemRestart($systemName);</code> 
 
 
