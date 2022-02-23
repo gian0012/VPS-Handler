@@ -63,7 +63,11 @@ Bot::addMethod("killBot", function ($sessionName) { //try this commands using: $
 
 });
 
+Bot::addMethod("sessionList", function () {
+    exec("sudo screen -ls",$output);
+    return $output[0];
 
+});
 
 
 ?>
