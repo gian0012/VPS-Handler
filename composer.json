@@ -1,17 +1,21 @@
 {
-  "name": "gian0012/vpshandler",
+  "name": "gian0012/vps-handler",
+  "type": "library",
   "description": "Use this unofficial NovaGram code source to handle your VPS.",
-  "require": {
-    "php": ">=7.4",
-    "skrtdev/novagram": ">=1.9"
-  },
+  "homepage": "https://github.com/Seldaek/monolog",
   "license": "MIT",
   "authors": [
     {
-      "name": "gian"
+      "name": "gian",
+      "role": "Developer"
     }
   ],
+  "require": {
+    "php": ">=7.4"
+  },
   "autoload": {
-    "files": ["src/vpsHandler.php"]
+    "psr-0": {
+      "Monolog": "src/vpsHandler.php"
+    }
   }
 }
