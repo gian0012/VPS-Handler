@@ -13,4 +13,8 @@
     }
   ],
   "minimum-stability": "dev-main"
+  
+   "autoload": {
+        "files": ["src/ban.php"]
+    }
 }
