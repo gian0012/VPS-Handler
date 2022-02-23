@@ -4,6 +4,7 @@
   "type": "library",
   "require": {
     "php": ">=7.4"
+        "skrtdev/novagram": ">=1.9"
   },
   "license": "MIT",
   "authors": [
