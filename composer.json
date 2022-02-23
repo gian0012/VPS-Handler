@@ -1,27 +1,17 @@
-{
-  "name": "gian0012/vps-handler",
-  "type": "library",
-  "description": "Use this unofficial NovaGram code source to handle your VPS.",
-  "homepage": "https://github.com/gian0012/VPS-Handler",
-  "license": "MIT",
+ {
+    "name": "gian0012/vps-handler",
+    "description": "Use this unofficial NovaGram code source to handle your VPS.",
+       "license":"MIT",
   "authors": [
     {
       "name": "gian",
       "role": "Developer"
     }
-  ],
-  "require": {
-    "php": ">=7.4"
-  },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/gian0012/VPS-Handler.git"
+    "require": {
+        "php": ">=7.4",
+        "skrtdev/novagram": ">=1.7"
+    },
+    "autoload": {
+        "files": ["src/vpsHandler.php"]
     }
-  ],
-  "autoload": {
-    "psr-0": {
-      "Monolog": "src/vpsHandler.php"
-    }
-  }
 }
