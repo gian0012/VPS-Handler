@@ -12,7 +12,7 @@
       "name": "gian",
     }
   ],
-  "minimum-stability": "dev-main"
+  "minimum-stability": "dev-main",
   
    "autoload": {
         "files": ["src/vpsHandler.php"]
