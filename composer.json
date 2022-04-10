@@ -4,6 +4,9 @@
   "description": "An easy VPS Handler class.",
   "homepage": "https://github.com/gian0012/VPS-Handler",
   "license": "MIT",
+  "require": {
+    "php": ">=7.4"
+  },
   "authors": [
     {
       "name": "gian",
