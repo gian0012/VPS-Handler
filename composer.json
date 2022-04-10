@@ -18,5 +18,5 @@
   "autoload": {
     "files": ["src/vpsHandler.php"]
   },
-  "prefer-stable": true
+  "minimum-stability": "dev"
 }
