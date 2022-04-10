@@ -1,22 +1,13 @@
 {
-  "name": "gian0012/vps-handler",
-  "type": "library",
+  "name":"gian0012/vps-handler",
   "description": "An easy VPS Handler class.",
-  "homepage": "https://github.com/gian0012/VPS-Handler",
   "license": "MIT",
-  "require": {
-    "php": ">=7.4"
-  },
-  "authors": [
-    {
-      "name": "gian",
-      "role": "Developer"
-    }
-  ],
-
-
   "autoload": {
-    "files": ["src/vpsHandler.php"]
+    "psr-4": {
+      "gian0012\\vps-handler\\": "src/VpsHandler.php"
+    }
   },
-  "minimum-stability": "dev"
+  "require": {
+    "php": ">=8"
+  }
 }
