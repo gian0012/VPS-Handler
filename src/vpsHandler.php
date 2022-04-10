@@ -1,73 +1,97 @@
 <?php
 
+
+namespace gian0012\VPSHandler;
+
+
 /**
- * File with the extension Prototype Methods.
  *
- * Creator of the extension: t.me/gian0012
+ *
+ * Creator of the extension: gian0012.tk
  * Licensed under the terms of the MIT License.
+ *
+ *
  */
 
-use \skrtdev\NovaGram\Bot;
 
-$output ??= NULL;
+Class vps {
 
-Bot::addMethod("whoami", function () {
 
-    $output = system("whoami");
-    return $output;
-});
 
-Bot::addMethod("reboot", function () { // WARNING: This method will reboot your VPS.
+    public function whoami() {
 
-    $output = system("sudo reboot");
-});
+        $response = system("whoami");
+        return $response;
+    }
 
-Bot::addMethod("getIP", function () {
 
-    $l = system("curl ipinfo.io/ip");
-    return ($l);
-});
+    public function reboot() : void {
 
-Bot::addMethod("serviceRestart", function ($serviceName) { // try this commands using: $Bot->serviceRestart("mysql");
-    $escapedServiceName = escapeshellarg($serviceName);
-    exec("systemctl restart $escapedServiceName" );
-});
+        system("sudo reboot");
 
-Bot::addMethod("uptime", function () {
+    }
 
-    $output = exec("uptime");
-    return " $output UTC";
-});
 
-Bot::addMethod("ramUse", function () {
+    public function getIP() {
 
-    exec("free -h",$output);
-    $t0 = preg_replace('#[\s]+#', ' | ', $output[0]);
-    $t1 = preg_replace('#[\s]+#', ' | ', $output[1]);
-    $t2 = preg_replace('#[\s]+#', ' | ', $output[2]);
-    return "$t0\n$t1\n$t2";
-});
+        $response = system("curl ipinfo.io/ip");
+        return $response;
 
-Bot::addMethod("startBot", function ($sessionName,$DirToFile) { //try this commands using: $Bot->startBot("screensession","/botdir/main.php");
-    // This command just might to work only with NovaGram or cli-based php libraries.
-    $escapedSessionName = escapeshellarg($sessionName);
-    $escapedDirToFile = escapeshellarg($DirToFile);
-    exec("screen -d -S $escapedSessionName -m php $escapedDirToFile");
+    }
 
-});
+    public function serviceRestart($serviceName) : void {  // try this command using: i.e. $vps->serviceRestart("mysql");
 
-Bot::addMethod("killBot", function ($sessionName) { //try this commands using: $Bot->killBot("screensession");
-    // This command just might to work only with NovaGram or cli-based php libraries.
-    $escapedSessionName = escapeshellarg($sessionName);
-    exec("screen -X -S $escapedSessionName kill");
+        $escapedServiceName = escapeshellarg($serviceName);
+        exec("systemctl restart $escapedServiceName" );
 
-});
+    }
 
-Bot::addMethod("sessionList", function () {
-    exec("sudo screen -ls",$output);
-    return $output[0];
 
-});
+    public function uptime() {
 
+        $response = exec("uptime");
+        return $response . " UTC";
+    }
+
+
+    public function ramUse() {
+
+        exec("free -h",$output);
+        $t0 = preg_replace('#[\s]+#', ' | ', $output[0]);
+        $t1 = preg_replace('#[\s]+#', ' | ', $output[1]);
+        $t2 = preg_replace('#[\s]+#', ' | ', $output[2]);
+        return "$t0\n$t1\n$t2";
+
+    }
+
+    public function startBot($sessionName,$DirToFile) : void { // try this command using: i.e. $vps->startBot("session","/dir/to/file.php");
+
+        // This command just might to work only with NovaGram or cli-based php libraries.
+        $escapedSessionName = escapeshellarg($sessionName);
+        $escapedDirToFile = escapeshellarg($DirToFile);
+        exec("screen -d -S $escapedSessionName -m php $escapedDirToFile");
+
+    }
+
+    public function killBot($sessionName) : void { // try this command using: i.e. $vps->killBot("sesssion");
+
+        // This command just might to work only with NovaGram or cli-based php libraries.
+        $escapedSessionName = escapeshellarg($sessionName);
+        exec("screen -X -S $escapedSessionName kill");
+
+    }
+
+    public function sessionList() {
+
+        exec("sudo screen -ls",$output);
+        return $output[0];
+
+    }
+
+
+
+
+
+}
 
 ?>
