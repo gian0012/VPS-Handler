@@ -1,8 +1,8 @@
 # VPS Handler
 An easy VPS Handler class.
 # 📄 Installation (<a href='https://getcomposer.org/'>Composer</a>)
-Install the extension with Composer: 
-<pre><code>composer require gian0012/vps-handler v2.x-dev</code></pre>
+Install the extension with GitHub: 
+<pre><code>gh repo clone gian0012/VPS-Handler</code></pre>
 # 🗄 Useful Methods
 <b> • </b><code> $vps->startBot('sessionName','/dir/to/your/bot/file.php');</code> \
 <b> • </b><code> $vps->reboot();</code> \
